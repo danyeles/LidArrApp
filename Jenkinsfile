@@ -24,9 +24,9 @@ pipeline {
                         -e PGID=${PGID} \
                         -e TZ=${TZ} \
                         -v ${CONFIG_PATH}:/config \
-                        -v /media/Media:/Media \
-                        -v /media/Media/Downloads:/downloads \
-                        -v /media/Media/Music:/music \
+                        -v /mnt/Media:/Media \
+                        -v /mnt/Media/Downloads:/downloads \
+                        -v /mnt/Media/Music:/music \
                         ${DOCKER_IMAGE}
                     """
                 }
