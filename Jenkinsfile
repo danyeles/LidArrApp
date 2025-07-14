@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        DOCKER_IMAGE = 'lscr.io/linuxserver/lidarr:latest'
+        DOCKER_IMAGE = 'blampe/lidarr:latest'
         CONTAINER_NAME = 'lidarr'
         PUID = '1000'
         PGID = '1000'
