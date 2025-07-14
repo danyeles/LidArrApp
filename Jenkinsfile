@@ -65,7 +65,7 @@ pipeline {
                         
                         sh """
                         docker stop ${CONTAINER_NAME}
-                        docker start ${DOCKER_IMAGE}
+                        docker start ${CONTAINER_NAME}
                         """
                     } else {
                         echo "Deploying new container ${CONTAINER_NAME}"
