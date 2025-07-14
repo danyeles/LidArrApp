@@ -65,18 +65,7 @@ pipeline {
                         
                         sh """
                         docker stop ${CONTAINER_NAME}
-                        docker run -d \
-                            --restart always \
-                            --name ${CONTAINER_NAME} \
-                            -p 8686:8686 \
-                            -e PUID=${PUID} \
-                            -e PGID=${PGID} \
-                            -e TZ=${TZ} \
-                            -v ${CONFIG_PATH}:/config \
-                            -v /mnt/Media:/Media \
-                            -v /mnt/Media/Downloads:/downloads \
-                            -v /mnt/Media/Music:/music \
-                            ${DOCKER_IMAGE}
+                        docker start ${DOCKER_IMAGE}
                         """
                     } else {
                         echo "Deploying new container ${CONTAINER_NAME}"
